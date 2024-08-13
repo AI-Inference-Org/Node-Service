@@ -4,7 +4,6 @@ import Landing from "../Components/textEffect";
 import { Button } from "../components/ui/button";
 import Globe from "../Components/globe";
 import Plugin from "../assets/simplify.svg";
-import { Image } from "lucide-react";
 
 export default function HomePage() {
   return (
@@ -100,7 +99,7 @@ export default function HomePage() {
               className="self-center"
             />
             <h1 className="mb-2 text-3xl font-bold">
-              Automated Plugin Extension Genertion
+              Plugin Extension Genertion
             </h1>
             <p className="text-lg text-gray-700">
               Providing smart notifications for timely payments. Offering

@@ -1,16 +1,31 @@
 import { cn } from "../lib/utils";
 import { Button } from "../components/ui/button";
 import { Input } from "../components/ui/input";
-import { Label } from "../components/ui/label";
 import { LoginFormProps } from "../types/formComponentProps";
+import { Label } from "../components/ui/label";
 
-export function FormComponent({ entityType }: LoginFormProps) {
-  const signinUrl =
-    entityType === "customer" ? "/customer/signup" : "/provider/signup";
+export function UserAuthForm({ entityType }: LoginFormProps) {
+  const signupUrl =
+    entityType === "customer" ? "/customer/login" : "/provider/login";
   return (
     <div className={cn("grid gap-6")}>
       <form>
         <div className="grid gap-6">
+          <div className="grid gap-4">
+            <Label className="text-black" htmlFor="avatar">
+              Name
+            </Label>
+            <Input
+              id="name"
+              name="name"
+              placeholder="Link to your name"
+              type="text"
+              autoCapitalize="none"
+              autoComplete="url"
+              autoCorrect="off"
+              required
+            />
+          </div>
           <div className="grid gap-4">
             <Label className="text-black" htmlFor="email">
               Email
@@ -41,13 +56,15 @@ export function FormComponent({ entityType }: LoginFormProps) {
               required
             />
           </div>
+
           <a
-            href={signinUrl}
+            href={signupUrl}
             className="text-sm text-muted-foreground hover:text-sky-600"
           >
-            Sign up instead?
+            Sign in instead?
           </a>
-          <Button className="w-full">Sign In</Button>
+
+          <Button type="submit">Sign Up</Button>
         </div>
       </form>
     </div>

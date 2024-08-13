@@ -1,5 +1,4 @@
-"use client";
-import { FormComponent } from "../Components/FormComponent";
+import { UserAuthForm } from "../Components/SignupAuthForm";
 import Authentication from "../Components/AuthFrom";
 import { loginAuthPageProps } from "../types/loginauthpage";
 
@@ -15,16 +14,16 @@ export default function AuthenticationPage({
           <div className="flex flex-col space-y-2">
             <h1 className="text-3xl font-semibold tracking-tight">
               {entityType === "customer"
-                ? `Log into ${entity} account`
-                : `Log into ${entity} account`}
+                ? `Sign Up into ${entity} account`
+                : `Sign Up into ${entity} account`}
             </h1>
             <p className="text-sm text-muted-foreground">
               {entityType === "customer"
-                ? `Enter your email below to log into your ${entity} account`
-                : `Enter your email below to log into your ${entity} account`}
+                ? `Enter your email below to sign up into your ${entity} account`
+                : `Enter your email below to sign up into your ${entity} account`}
             </p>
           </div>
-          <FormComponent entityType={entityType} />
+          <UserAuthForm />
           <p className="px-8 text-center text-sm text-muted-foreground">
             By clicking continue, you agree to our{" "}
             <a

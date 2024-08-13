@@ -1,7 +1,3 @@
-import React from "react";
-// import ReccurPay from "@/app/assets/RecurrPay";
-// import Logo from "@/app/assets/Logo";
-
 function Authentication() {
   return (
     <div className="relative hidden h-full flex-col bg-muted p-10 text-white dark:border-r lg:flex">

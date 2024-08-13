@@ -1,6 +1,4 @@
 import { cn } from "../lib/utils";
-import Logo from "./Logo";
-// import { ModeToggle } from "@/app/components/mode-toggle";
 
 export function MainNav({
   className,
@@ -14,16 +12,16 @@ export function MainNav({
       {/* <Logo /> */}
       <nav className="flex items-center space-x-4 lg:space-x-6">
         <a
-          href="#"
+          href="/customer/login"
           className="text-sm font-medium transition-colors hover:text-primary"
         >
-          Customer Login
+          Buy Services
         </a>
         <a
-          href="E"
+          href="/provider/login"
           className="text-sm font-medium text-muted-foreground transition-colors hover:text-primary"
         >
-          Seller Login
+          Sell Services
         </a>
         <a
           href="/organization-signup"
