@@ -1,128 +1,4 @@
-export default function SideBar() {
-  return (
-    <div className="flex min-h-screen">
-      <div className="bg-gradient-to-br from-[#6366F1] to-[#9333EA] p-6 md:p-8 lg:p-10 xl:p-12">
-        <div className="flex items-center mb-8">
-          <a href="#" className="flex items-center gap-2">
-            <MountainIcon className="h-8 w-8 text-white" />
-            <span className="text-xl font-semibold text-white">Acme Inc</span>
-          </a>
-        </div>
-        <nav className="space-y-6">
-          <div>
-            <h3 className="text-sm font-medium text-white mb-3">General</h3>
-            <div className="grid gap-3">
-              <a
-                href="/"
-                className="flex items-center gap-3 rounded-md px-4 py-3 text-white hover:bg-[#7C3AED] transition-colors"
-              >
-                <HomeIcon className="h-6 w-6" />
-                <span className="text-base font-medium">Home</span>
-              </a>
-              <a
-                href="/dashboard"
-                className="flex items-center gap-3 rounded-md px-4 py-3 text-white hover:bg-[#7C3AED] transition-colors"
-              >
-                <LayoutDashboardIcon className="h-6 w-6" />
-                <span className="text-base font-medium">Dashboard</span>
-              </a>
-            </div>
-          </div>
-          <div>
-            <h3 className="text-sm font-medium text-white mb-3">Explore</h3>
-            <div className="grid gap-3">
-              <a
-                href="#"
-                className="flex items-center gap-3 rounded-md px-4 py-3 text-white hover:bg-[#7C3AED] transition-colors"
-              >
-                <BriefcaseIcon className="h-6 w-6" />
-                <span className="text-base font-medium">AI Applications</span>
-              </a>
-              <a
-                href="#"
-                className="flex items-center gap-3 rounded-md px-4 py-3 text-white hover:bg-[#7C3AED] transition-colors"
-              >
-                <FolderIcon className="h-6 w-6" />
-                <span className="text-base font-medium">
-                  Application Binaries
-                </span>
-              </a>
-              <a
-                href="#"
-                className="flex items-center gap-3 rounded-md px-4 py-3 text-white hover:bg-[#7C3AED] transition-colors"
-              >
-                <ClipboardIcon className="h-6 w-6" />
-                <span className="text-base font-medium">AI Plugins</span>
-              </a>
-              <a
-                href="#"
-                className="flex items-center gap-3 rounded-md px-4 py-3 text-white hover:bg-[#7C3AED] transition-colors"
-              >
-                <SlackIcon className="h-6 w-6" />
-                <span className="text-base font-medium">API's</span>
-              </a>
-            </div>
-          </div>
-          <div>
-            <h3 className="text-sm font-medium text-white mb-3">Team</h3>
-            <div className="grid gap-3">
-              <a
-                href="#"
-                className="flex items-center gap-3 rounded-md px-4 py-3 text-white hover:bg-[#7C3AED] transition-colors"
-              >
-                <UsersIcon className="h-6 w-6" />
-                <span className="text-base font-medium">Members</span>
-              </a>
-              <a
-                href="#"
-                className="flex items-center gap-3 rounded-md px-4 py-3 text-white hover:bg-[#7C3AED] transition-colors"
-              >
-                <SlackIcon className="h-6 w-6" />
-                <span className="text-base font-medium">Slack</span>
-              </a>
-              <a
-                href="#"
-                className="flex items-center gap-3 rounded-md px-4 py-3 text-white hover:bg-[#7C3AED] transition-colors"
-              >
-                <MailIcon className="h-6 w-6" />
-                <span className="text-base font-medium">Email</span>
-              </a>
-            </div>
-          </div>
-          <div>
-            <h3 className="text-sm font-medium text-white mb-3">Settings</h3>
-            <div className="grid gap-3">
-              <a
-                href="#"
-                className="flex items-center gap-3 rounded-md px-4 py-3 text-white hover:bg-[#7C3AED] transition-colors"
-              >
-                <SettingsIcon className="h-6 w-6" />
-                <span className="text-base font-medium">Account</span>
-              </a>
-              <a
-                href="#"
-                className="flex items-center gap-3 rounded-md px-4 py-3 text-white hover:bg-[#7C3AED] transition-colors"
-              >
-                <LockIcon className="h-6 w-6" />
-                <span className="text-base font-medium">Security</span>
-              </a>
-              <a
-                href="#"
-                className="flex items-center gap-3 rounded-md px-4 py-3 text-white hover:bg-[#7C3AED] transition-colors"
-              >
-                <LogOutIcon className="h-6 w-6" />
-                <span className="text-base font-medium">Logout</span>
-              </a>
-            </div>
-          </div>
-        </nav>
-      </div>
-      <div className="flex-1 p-6 md:p-8 lg:p-10 xl:p-12" />
-    </div>
-  );
-}
-
-function BriefcaseIcon(props) {
+export function BriefcaseIcon(props) {
   return (
     <svg
       {...props}
@@ -142,7 +18,7 @@ function BriefcaseIcon(props) {
   );
 }
 
-function CalendarIcon(props) {
+export function CalendarIcon(props) {
   return (
     <svg
       {...props}
@@ -164,7 +40,7 @@ function CalendarIcon(props) {
   );
 }
 
-function ClipboardIcon(props) {
+export function ClipboardIcon(props) {
   return (
     <svg
       {...props}
@@ -184,7 +60,7 @@ function ClipboardIcon(props) {
   );
 }
 
-function FolderIcon(props) {
+export function FolderIcon(props) {
   return (
     <svg
       {...props}
@@ -203,7 +79,7 @@ function FolderIcon(props) {
   );
 }
 
-function HomeIcon(props) {
+export function HomeIcon(props) {
   return (
     <svg
       {...props}
@@ -223,7 +99,7 @@ function HomeIcon(props) {
   );
 }
 
-function LayoutDashboardIcon(props) {
+export function LayoutDashboardIcon(props) {
   return (
     <svg
       {...props}
@@ -245,7 +121,7 @@ function LayoutDashboardIcon(props) {
   );
 }
 
-function LockIcon(props) {
+export function LockIcon(props) {
   return (
     <svg
       {...props}
@@ -265,7 +141,7 @@ function LockIcon(props) {
   );
 }
 
-function LogOutIcon(props) {
+export function LogOutIcon(props) {
   return (
     <svg
       {...props}
@@ -286,7 +162,7 @@ function LogOutIcon(props) {
   );
 }
 
-function MailIcon(props) {
+export function MailIcon(props) {
   return (
     <svg
       {...props}
@@ -306,7 +182,7 @@ function MailIcon(props) {
   );
 }
 
-function MountainIcon(props) {
+export function MountainIcon(props) {
   return (
     <svg
       {...props}
@@ -325,7 +201,7 @@ function MountainIcon(props) {
   );
 }
 
-function SettingsIcon(props) {
+export function SettingsIcon(props) {
   return (
     <svg
       {...props}
@@ -345,7 +221,7 @@ function SettingsIcon(props) {
   );
 }
 
-function SlackIcon(props) {
+export function SlackIcon(props) {
   return (
     <svg
       {...props}
@@ -371,7 +247,7 @@ function SlackIcon(props) {
   );
 }
 
-function UsersIcon(props) {
+export function UsersIcon(props) {
   return (
     <svg
       {...props}
