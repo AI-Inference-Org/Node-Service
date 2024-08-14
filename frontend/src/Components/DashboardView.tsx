@@ -118,15 +118,10 @@ function DashboardView() {
                 </div>
               </CardContent>
             </Card>
-            <div className="grid grid-cols-2 gap-4">
-              <Card className="bg-[#7C3AED] text-white">
+            <div className="">
+              <Card className=" text-black">
                 <CardContent>
                   <BarchartChart className="aspect-[9/4]" />
-                </CardContent>
-              </Card>
-              <Card className="bg-[#7C3AED] text-white">
-                <CardContent>
-                  <LineChart className="aspect-[9/4]" />
                 </CardContent>
               </Card>
             </div>

@@ -1,15 +1,14 @@
-import React from "react";
 import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
 import Landing from "../pages/LandingPage";
 import AuthenticationPage from "../pages/AuthenticationPage";
 import SignUpAuthPage from "../pages/SignUpAuthPage";
-import SideBar from "../layouts/sideBarLayout";
-import { section } from "../config/providerDashborad";
 import AIApplicationPage from "../pages/AIApplicationPage";
 import BinariesForm from "../pages/BinariesPage";
 import AIPluginPage from "../pages/AIPluginPage";
 import RestApiPage from "../pages/AIRestApiForm";
 import Dashboard from "../pages/DashboardPage";
+import ComputePage from "../pages/ComputePage";
+import ProvidersListingPage from "../pages/ProvidersListingsPage";
 const AppRoutes = () => {
   return (
     <div>
@@ -44,7 +43,9 @@ const AppRoutes = () => {
           <Route path="/ai/application" element={<AIApplicationPage />} />
           <Route path="/binaries" element={<BinariesForm />} />
           <Route path="/plugins" element={<AIPluginPage />} />
-          <Route path="/apis" element={<RestApiPage />} />{" "}
+          <Route path="/apis" element={<RestApiPage />} />
+          <Route path="/list/compute" element={<ComputePage />} />
+          <Route path="/listings" element={<ProvidersListingPage />} />
         </Routes>
       </Router>
     </div>

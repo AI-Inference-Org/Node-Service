@@ -33,7 +33,10 @@ function AIApplicationForm() {
             </CardContent>
           </Card>
         </div>
-        <Card className="w-full max-w-md mx-auto mt-[6rem]">
+        <h4 className="text-5xl font-bold text-black text-center pt-[4rem]">
+          List Application Binaries
+        </h4>
+        <Card className="w-[80%] mx-auto mt-[6rem]">
           <CardHeader>
             <CardTitle className="text-xl text-black">List Binaries</CardTitle>
             <CardDescription className="text-black">

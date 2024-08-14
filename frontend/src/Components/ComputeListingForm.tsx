@@ -13,43 +13,21 @@ function AIApplicationForm() {
   return (
     <>
       <div className="flex flex-col mx-auto pt-5">
-        <div className="grid grid-cols-3 gap-8 mb-6 w-[80rem] ">
-          <Card className="bg-black text-white">
-            <CardContent className="p-8">
-              <div className="text-2xl font-bold">125</div>
-              <div className="text-sm">AI Applications Listed</div>
-            </CardContent>
-          </Card>
-          <Card className="bg-black text-white">
-            <CardContent className="p-8">
-              <div className="text-2xl font-bold">10</div>
-              <div className="text-sm">Conversion Rate</div>
-            </CardContent>
-          </Card>
-          <Card className="bg-black text-white">
-            <CardContent className="p-8">
-              <div className="text-2xl font-bold">$12,345</div>
-              <div className="text-sm">Revenue Generated</div>
-            </CardContent>
-          </Card>
-        </div>
         <h4 className="text-5xl font-bold text-black text-center pt-[4rem]">
-          List AI Application
+          List Compute Order
         </h4>
-        <Card className="w-[80%]  mx-auto mt-[6rem]">
+        <Card className="w-full mx-auto mt-[6rem]">
           <CardHeader>
-            <CardTitle className="text-xl text-black">
-              List AI Application
-            </CardTitle>
+            <CardTitle className="text-xl text-black">List Compute</CardTitle>
             <CardDescription className="text-black">
-              Enter information for AI Application
+              Enter information for Compute
             </CardDescription>
           </CardHeader>
           <CardContent>
             <div className="space-y-4">
               <div className="space-y-2">
                 <Label htmlFor="name" className="text-black">
-                  Name of AI Model
+                  Name of Binary File
                 </Label>
                 <Input
                   id="name"
@@ -62,7 +40,7 @@ function AIApplicationForm() {
               <div className="grid grid-cols-2 gap-4">
                 <div className="space-y-2">
                   <Label htmlFor="category" className="text-black">
-                    Category of AI Model
+                    Category of Binary File
                   </Label>
                   <Input
                     id="category"
@@ -85,7 +63,7 @@ function AIApplicationForm() {
               </div>
               <div className="space-y-2">
                 <Label htmlFor="description" className="text-black">
-                  Description of AI Model
+                  Description of Binaries
                 </Label>
                 <Input
                   id="description"
@@ -98,7 +76,7 @@ function AIApplicationForm() {
 
               <div className="space-y-2">
                 <Label htmlFor="link" className="text-black">
-                  URL of AI Model
+                  URL of Binary File
                 </Label>
                 <Input
                   id="link"
