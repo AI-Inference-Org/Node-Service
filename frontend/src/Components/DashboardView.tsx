@@ -1,11 +1,10 @@
-import { Button } from "../components/ui/button";
 import {
   Card,
   CardContent,
   CardHeader,
   CardTitle,
 } from "../components/ui/card";
-import { CartesianGrid, XAxis, Bar, BarChart, Line, LineChart } from "recharts";
+import { CartesianGrid, XAxis, Bar, BarChart } from "recharts";
 import {
   ChartTooltipContent,
   ChartTooltip,
