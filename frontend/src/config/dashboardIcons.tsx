@@ -1,7 +1,6 @@
-export function BriefcaseIcon(props) {
+export function BriefcaseIcon() {
   return (
     <svg
-      {...props}
       xmlns="http://www.w3.org/2000/svg"
       width="24"
       height="24"
@@ -18,10 +17,9 @@ export function BriefcaseIcon(props) {
   );
 }
 
-export function CalendarIcon(props) {
+export function CalendarIcon() {
   return (
     <svg
-      {...props}
       xmlns="http://www.w3.org/2000/svg"
       width="24"
       height="24"
@@ -40,10 +38,9 @@ export function CalendarIcon(props) {
   );
 }
 
-export function ClipboardIcon(props) {
+export function ClipboardIcon() {
   return (
     <svg
-      {...props}
       xmlns="http://www.w3.org/2000/svg"
       width="24"
       height="24"
@@ -60,10 +57,9 @@ export function ClipboardIcon(props) {
   );
 }
 
-export function FolderIcon(props) {
+export function FolderIcon() {
   return (
     <svg
-      {...props}
       xmlns="http://www.w3.org/2000/svg"
       width="24"
       height="24"
@@ -79,10 +75,9 @@ export function FolderIcon(props) {
   );
 }
 
-export function HomeIcon(props) {
+export function HomeIcon() {
   return (
     <svg
-      {...props}
       xmlns="http://www.w3.org/2000/svg"
       width="24"
       height="24"
@@ -99,10 +94,9 @@ export function HomeIcon(props) {
   );
 }
 
-export function LayoutDashboardIcon(props) {
+export function LayoutDashboardIcon() {
   return (
     <svg
-      {...props}
       xmlns="http://www.w3.org/2000/svg"
       width="24"
       height="24"
@@ -121,10 +115,9 @@ export function LayoutDashboardIcon(props) {
   );
 }
 
-export function LockIcon(props) {
+export function LockIcon() {
   return (
     <svg
-      {...props}
       xmlns="http://www.w3.org/2000/svg"
       width="24"
       height="24"
@@ -141,10 +134,9 @@ export function LockIcon(props) {
   );
 }
 
-export function LogOutIcon(props) {
+export function LogOutIcon() {
   return (
     <svg
-      {...props}
       xmlns="http://www.w3.org/2000/svg"
       width="24"
       height="24"
@@ -162,10 +154,9 @@ export function LogOutIcon(props) {
   );
 }
 
-export function MailIcon(props) {
+export function MailIcon() {
   return (
     <svg
-      {...props}
       xmlns="http://www.w3.org/2000/svg"
       width="24"
       height="24"
@@ -182,10 +173,9 @@ export function MailIcon(props) {
   );
 }
 
-export function MountainIcon(props) {
+export function MountainIcon() {
   return (
     <svg
-      {...props}
       xmlns="http://www.w3.org/2000/svg"
       width="24"
       height="24"
@@ -201,10 +191,9 @@ export function MountainIcon(props) {
   );
 }
 
-export function SettingsIcon(props) {
+export function SettingsIcon() {
   return (
     <svg
-      {...props}
       xmlns="http://www.w3.org/2000/svg"
       width="24"
       height="24"
@@ -221,10 +210,9 @@ export function SettingsIcon(props) {
   );
 }
 
-export function SlackIcon(props) {
+export function SlackIcon() {
   return (
     <svg
-      {...props}
       xmlns="http://www.w3.org/2000/svg"
       width="24"
       height="24"
@@ -247,10 +235,9 @@ export function SlackIcon(props) {
   );
 }
 
-export function UsersIcon(props) {
+export function UsersIcon() {
   return (
     <svg
-      {...props}
       xmlns="http://www.w3.org/2000/svg"
       width="24"
       height="24"
@@ -265,6 +252,42 @@ export function UsersIcon(props) {
       <circle cx="9" cy="7" r="4" />
       <path d="M22 21v-2a4 4 0 0 0-3-3.87" />
       <path d="M16 3.13a4 4 0 0 1 0 7.75" />
+    </svg>
+  );
+}
+
+export function List() {
+  return (
+    <svg
+      xmlns="http://www.w3.org/2000/svg"
+      width="24"
+      height="24"
+      viewBox="0 0 512 512"
+      fill="white"
+      stroke="currentColor"
+      strokeWidth="2"
+      strokeLinecap="round"
+      strokeLinejoin="round"
+    >
+      <path d="M40 48C26.7 48 16 58.7 16 72l0 48c0 13.3 10.7 24 24 24l48 0c13.3 0 24-10.7 24-24l0-48c0-13.3-10.7-24-24-24L40 48zM192 64c-17.7 0-32 14.3-32 32s14.3 32 32 32l288 0c17.7 0 32-14.3 32-32s-14.3-32-32-32L192 64zm0 160c-17.7 0-32 14.3-32 32s14.3 32 32 32l288 0c17.7 0 32-14.3 32-32s-14.3-32-32-32l-288 0zm0 160c-17.7 0-32 14.3-32 32s14.3 32 32 32l288 0c17.7 0 32-14.3 32-32s-14.3-32-32-32l-288 0zM16 232l0 48c0 13.3 10.7 24 24 24l48 0c13.3 0 24-10.7 24-24l0-48c0-13.3-10.7-24-24-24l-48 0c-13.3 0-24 10.7-24 24zM40 368c-13.3 0-24 10.7-24 24l0 48c0 13.3 10.7 24 24 24l48 0c13.3 0 24-10.7 24-24l0-48c0-13.3-10.7-24-24-24l-48 0z" />
+    </svg>
+  );
+}
+
+export function Compute() {
+  return (
+    <svg
+      xmlns="http://www.w3.org/2000/svg"
+      width="24"
+      height="24"
+      viewBox="0 0 612 610"
+      fill="white"
+      stroke="white"
+      strokeWidth="2"
+      strokeLinecap="round"
+      strokeLinejoin="round"
+    >
+      <path d="M128 32C92.7 32 64 60.7 64 96l0 256 64 0 0-256 384 0 0 256 64 0 0-256c0-35.3-28.7-64-64-64L128 32zM19.2 384C8.6 384 0 392.6 0 403.2C0 445.6 34.4 480 76.8 480l486.4 0c42.4 0 76.8-34.4 76.8-76.8c0-10.6-8.6-19.2-19.2-19.2L19.2 384z" />
     </svg>
   );
 }

@@ -4,6 +4,7 @@ import Landing from "../pages/LandingPage";
 import AuthenticationPage from "../pages/AuthenticationPage";
 import SignUpAuthPage from "../pages/SignUpAuthPage";
 import SideBar from "../layouts/sideBarLayout";
+import { section } from "../config/providerDashborad";
 const AppRoutes = () => {
   return (
     <div>
@@ -34,7 +35,10 @@ const AppRoutes = () => {
               <SignUpAuthPage entity={"proivder"} entityType={"provider"} />
             }
           />
-          <Route path="/dashboard" element={<SideBar />} />
+          <Route
+            path="/provider/dashboard"
+            element={<SideBar section={section} />}
+          />
         </Routes>
       </Router>
     </div>
