@@ -123,7 +123,7 @@ export default function Component() {
                 <span className="text-lg font-semibold">
                   ${listing.price.toFixed(2)}
                 </span>
-                <Button size="sm">View Details</Button>
+                {/* <Button size="sm">View Details</Button> */}
               </div>
             </div>
           </Card>

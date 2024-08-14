@@ -9,6 +9,11 @@ import RestApiPage from "../pages/AIRestApiForm";
 import Dashboard from "../pages/DashboardPage";
 import ComputePage from "../pages/ComputePage";
 import ProvidersListingPage from "../pages/ProvidersListingsPage";
+import UserDashboard from "../pages/UserDashboard";
+import UserAIMarketPlace from "../pages/userAIMarketPlace";
+import ComputeMarketPlace from "../pages/ComputeMarketplace";
+import CheckOutPage from "../pages/CheckoutPage";
+
 const AppRoutes = () => {
   return (
     <div>
@@ -46,6 +51,10 @@ const AppRoutes = () => {
           <Route path="/apis" element={<RestApiPage />} />
           <Route path="/list/compute" element={<ComputePage />} />
           <Route path="/listings" element={<ProvidersListingPage />} />
+          <Route path="/customer/dashboard" element={<UserDashboard />} />
+          <Route path="/marketplace" element={<UserAIMarketPlace />} />
+          <Route path="/compute/marketplace" element={<ComputeMarketPlace />} />
+          <Route path="/checkout" element={<CheckOutPage />} />
         </Routes>
       </Router>
     </div>
