@@ -8,7 +8,7 @@ interface sectionProps {
 export default function SideBar({ section }: sectionProps) {
   return (
     <div className="flex min-h-screen">
-      <div className="bg-black p-6 md:p-8 lg:p-10 xl:p-12 w-1/3">
+      <div className="bg-black p-6 md:p-8 lg:p-10 xl:p-12 ">
         <nav className="space-y-6">
           {section.map((section, index) => (
             <div key={index}>
@@ -33,16 +33,16 @@ export default function SideBar({ section }: sectionProps) {
             </div>
           ))}
         </nav>
-        <div className="mt-8 bg-white rounded-md p-6">
-          <h3 className="text-lg font-semibold text-black mb-3">
+        <div className="mt-8 bg-black rounded-md p-6 border border-white">
+          <h3 className="text-lg font-semibold text-white mb-3">
             Get in Touch
           </h3>
-          <p className="text-black mb-4">
+          <p className="text-white mb-4">
             Have a question or need help? Contact our support team.
           </p>
           <Button
             variant="outline"
-            className="w-full border-black text-black hover:bg-[#7C3AED]"
+            className="w-full border-black text-black  border border-b-white"
           >
             Contact Support
           </Button>

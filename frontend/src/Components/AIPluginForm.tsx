@@ -16,8 +16,8 @@ function AIApplicationForm() {
         <div className="grid grid-cols-3 gap-8 mb-6 w-[80rem] ">
           <Card className="bg-black text-white">
             <CardContent className="p-8">
-              <div className="text-2xl font-bold">125</div>
-              <div className="text-sm">AI Applications Listed</div>
+              <div className="text-2xl font-bold">20</div>
+              <div className="text-sm">Plugins Listed</div>
             </CardContent>
           </Card>
           <Card className="bg-black text-white">
@@ -28,25 +28,23 @@ function AIApplicationForm() {
           </Card>
           <Card className="bg-black text-white">
             <CardContent className="p-8">
-              <div className="text-2xl font-bold">$12,345</div>
+              <div className="text-2xl font-bold">$1,345</div>
               <div className="text-sm">Revenue Generated</div>
             </CardContent>
           </Card>
         </div>
         <Card className="w-full max-w-md mx-auto mt-[6rem]">
           <CardHeader>
-            <CardTitle className="text-xl text-black">
-              List AI Application
-            </CardTitle>
+            <CardTitle className="text-xl text-black">List Plugins</CardTitle>
             <CardDescription className="text-black">
-              Enter information for AI Application
+              Enter information for Plugin
             </CardDescription>
           </CardHeader>
           <CardContent>
             <div className="space-y-4">
               <div className="space-y-2">
                 <Label htmlFor="name" className="text-black">
-                  Name of AI Model
+                  Name of Plugin
                 </Label>
                 <Input
                   id="name"
@@ -56,33 +54,20 @@ function AIApplicationForm() {
                   className="text-black placeholder:text-black"
                 />
               </div>
-              <div className="grid grid-cols-2 gap-4">
-                <div className="space-y-2">
-                  <Label htmlFor="category" className="text-black">
-                    Category of AI Model
-                  </Label>
-                  <Input
-                    id="category"
-                    placeholder="Image Classification"
-                    required
-                    className="text-black placeholder:text-black"
-                  />
-                </div>
-                <div className="space-y-2">
-                  <Label htmlFor="status" className="text-black">
-                    Status of AI Model
-                  </Label>
-                  <Input
-                    id="status"
-                    placeholder="Production Ready"
-                    required
-                    className="text-black placeholder:text-black"
-                  />
-                </div>
+              <div className="space-y-2">
+                <Label htmlFor="category" className="text-black">
+                  Category of Plugin
+                </Label>
+                <Input
+                  id="category"
+                  placeholder="Image Classification"
+                  required
+                  className="text-black placeholder:text-black"
+                />
               </div>
               <div className="space-y-2">
                 <Label htmlFor="description" className="text-black">
-                  Description of AI Model
+                  Description of Plugin
                 </Label>
                 <Input
                   id="description"
@@ -95,7 +80,7 @@ function AIApplicationForm() {
 
               <div className="space-y-2">
                 <Label htmlFor="link" className="text-black">
-                  URL of AI Model
+                  URL for Plugin
                 </Label>
                 <Input
                   id="link"

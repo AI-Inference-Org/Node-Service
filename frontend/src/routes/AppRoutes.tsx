@@ -5,6 +5,11 @@ import AuthenticationPage from "../pages/AuthenticationPage";
 import SignUpAuthPage from "../pages/SignUpAuthPage";
 import SideBar from "../layouts/sideBarLayout";
 import { section } from "../config/providerDashborad";
+import AIApplicationPage from "../pages/AIApplicationPage";
+import BinariesForm from "../pages/BinariesPage";
+import AIPluginPage from "../pages/AIPluginPage";
+import RestApiPage from "../pages/AIRestApiForm";
+import Dashboard from "../pages/DashboardPage";
 const AppRoutes = () => {
   return (
     <div>
@@ -35,10 +40,11 @@ const AppRoutes = () => {
               <SignUpAuthPage entity={"proivder"} entityType={"provider"} />
             }
           />
-          <Route
-            path="/provider/dashboard"
-            element={<SideBar section={section} />}
-          />
+          <Route path="/provider/dashboard" element={<Dashboard />} />
+          <Route path="/ai/application" element={<AIApplicationPage />} />
+          <Route path="/binaries" element={<BinariesForm />} />
+          <Route path="/plugins" element={<AIPluginPage />} />
+          <Route path="/apis" element={<RestApiPage />} />{" "}
         </Routes>
       </Router>
     </div>
