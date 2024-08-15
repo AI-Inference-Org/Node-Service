@@ -77,7 +77,7 @@ export default function Component() {
       );
     });
   }, [searchTerm, filters]);
-  const handleSearch = (e) => {
+  const handleSearch = (e:any) => {
     setSearchTerm(e.target.value);
   };
   const handleFilterChange = (type, value) => {

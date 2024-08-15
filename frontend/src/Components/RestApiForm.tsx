@@ -13,7 +13,7 @@ function AIApplicationForm() {
   return (
     <>
       <div className="flex flex-col mx-auto pt-5">
-        <div className="grid grid-cols-3 gap-8 mb-6 w-[80rem] ">
+        <div className="grid grid-cols-1 lg:grid-cols-3 gap-8 mb-6 pr-2 w-auto lg:w-[80rem]">
           <Card className="bg-black text-white">
             <CardContent className="p-8">
               <div className="text-2xl font-bold">20</div>
@@ -33,7 +33,7 @@ function AIApplicationForm() {
             </CardContent>
           </Card>
         </div>
-        <h4 className="text-5xl font-bold text-black text-center pt-[4rem]">
+        <h4 className="lg:text-5xl text-4xl font-bold text-black text-center pt-[4rem]">
           List Application API's
         </h4>
         <Card className="w-[80%] mx-auto mt-[6rem]">

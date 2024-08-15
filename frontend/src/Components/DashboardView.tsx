@@ -15,7 +15,7 @@ function DashboardView() {
   return (
     <div>
       <div className="flex-1 p-6 md:p-8 lg:p-10 xl:p-12  flex flex-col">
-        <div className="grid grid-cols-3 gap-4 mb-6 ">
+        <div className="grid grid-cols-2 lg:grid-cols-3 gap-4 mb-6 ">
           <Card className="bg-white text-black ">
             <CardContent className="h-[10rem] p-6">
               <div className="text-2xl font-bold">125</div>
@@ -35,7 +35,7 @@ function DashboardView() {
             </CardContent>
           </Card>
         </div>
-        <div className="grid grid-cols-2 gap-4 flex-1">
+        <div className="grid lg:grid-cols-2 gap-4 flex-1">
           <Card className="bg-white text-black">
             <CardHeader>
               <CardTitle className="text-xl">Recent Activity</CardTitle>

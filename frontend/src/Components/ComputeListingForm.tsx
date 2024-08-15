@@ -12,7 +12,7 @@ import { Input } from "../components/ui/input";
 function AIApplicationForm() {
   return (
     <>
-      <div className="flex flex-col mx-auto pt-5">
+      <div className="flex flex-col mx-auto pt-5 pr-2">
         <h4 className="text-5xl font-bold text-black text-center pt-[4rem]">
           List Compute Order
         </h4>
@@ -37,8 +37,8 @@ function AIApplicationForm() {
                   className="text-black placeholder:text-black"
                 />
               </div>
-              <div className="grid grid-cols-2 gap-4">
-                <div className="space-y-2">
+              <div className="lg:text-5xl text-4xl font-bold text-black text-center pt-[2rem]">
+                <div className="space-y-2 flex flex-col items-start ">
                   <Label htmlFor="category" className="text-black">
                     Category of Binary File
                   </Label>
@@ -49,7 +49,7 @@ function AIApplicationForm() {
                     className="text-black placeholder:text-black"
                   />
                 </div>
-                <div className="space-y-2">
+                <div className="space-y-2 mt-6 flex flex-col items-start ">
                   <Label htmlFor="status" className="text-black">
                     Status of AI Model
                   </Label>

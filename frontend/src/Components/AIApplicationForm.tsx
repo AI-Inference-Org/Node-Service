@@ -13,7 +13,7 @@ function AIApplicationForm() {
   return (
     <>
       <div className="flex flex-col mx-auto pt-5">
-        <div className="grid grid-cols-3 gap-8 mb-6 w-[80rem] ">
+        <div className="grid grid-cols-1 lg:grid-cols-3 gap-8 mb-6 pr-2 w-auto lg:w-[80rem]  ">
           <Card className="bg-black text-white">
             <CardContent className="p-8">
               <div className="text-2xl font-bold">125</div>
@@ -59,7 +59,7 @@ function AIApplicationForm() {
                   className="text-black placeholder:text-black"
                 />
               </div>
-              <div className="grid grid-cols-2 gap-4">
+              <div className="grid lg:grid-cols-2 grid-cols-1 gap-4">
                 <div className="space-y-2">
                   <Label htmlFor="category" className="text-black">
                     Category of AI Model

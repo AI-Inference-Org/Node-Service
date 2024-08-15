@@ -60,7 +60,7 @@ export default function Component() {
         </Card>
       </div>
       <div className="">
-        <Card className="min-w-[70rem]">
+        <Card className="lg:min-w-[70rem]">
           <CardHeader>
             <CardTitle>Order</CardTitle>
           </CardHeader>
