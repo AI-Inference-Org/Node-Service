@@ -4,6 +4,7 @@ import Landing from "../Components/textEffect";
 import { Button } from "../components/ui/button";
 import Globe from "../Components/globe";
 import Plugin from "../assets/simplify.svg";
+import ConnectButton from "../Components/ConnectWalletButton";
 
 export default function HomePage() {
   return (
@@ -25,9 +26,10 @@ export default function HomePage() {
                 generating web apps, APIs, and plugins from AI inferences, while
                 handling payments and infrastructure.
               </p>
-              <Button size="lg" className="bg-[#062056] rounded-full">
+              {/* <Button size="lg" className="bg-[#062056] rounded-full">
                 Get Started
-              </Button>
+              </Button> */}
+              <ConnectButton />
             </div>
             <div className="flex h-[600px] w-[600px] justify-center md:mt-0 md:justify-start">
               <Globe />
