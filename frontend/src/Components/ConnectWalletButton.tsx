@@ -1,6 +1,6 @@
 import { ConnectButton } from "@rainbow-me/rainbowkit";
 
-export default function Profile() {
+export default function ConnectWalletButton() {
   return (
     <div>
       <ConnectButton />

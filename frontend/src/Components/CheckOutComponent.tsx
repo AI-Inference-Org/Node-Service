@@ -5,6 +5,7 @@ import {
   CardContent,
 } from "../components/ui/card";
 import { Button } from "../components/ui/button";
+import ConnectWalletButton from "./ConnectWalletButton";
 
 export default function Component() {
   return (
@@ -44,14 +45,74 @@ export default function Component() {
               <div>
                 <p className="font-medium">Seller Wallet Address</p>
                 <p className="text-muted-foreground">
-                  0x123456789abcdef0123456789abcdef01234567
+                  0x4F42a89B944138744a608660c4891803E302f043
                 </p>
               </div>
               <div>
                 <p className="font-medium">Amount to Pay</p>
                 <p className="text-2xl font-bold">$99.99</p>
               </div>
-              <Button className="w-full">Pay Now</Button>
+              {/* <Button className="w-full">Pay Now</Button>
+               */}
+              <ConnectWalletButton />
+            </div>
+          </CardContent>
+        </Card>
+      </div>
+      <div className="">
+        <Card className="min-w-[70rem]">
+          <CardHeader>
+            <CardTitle>Order</CardTitle>
+          </CardHeader>
+          <CardContent>
+            <div className="grid gap-4">
+              <div>
+                <p className="font-medium">Seller Wallet Address</p>
+                <p className="text-muted-foreground">
+                  0x4F42a89B944138744a608660c4891803E302f043
+                </p>
+              </div>
+              <div>
+                <p className="font-medium">Amount Paid</p>
+                <p className="text-2xl font-bold">$99.99</p>
+              </div>
+              <div>
+                <p className="font-medium">API EndPoint</p>
+                <p className="text-muted-foreground">
+                  <a
+                    href="https://api.model.com/v1/current"
+                    className="text-blue-500 underline"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                  >
+                    https://api.model.com/v1/current
+                  </a>
+                </p>
+              </div>
+              <div>
+                <p className="font-medium">API Key</p>
+                <p className="text-muted-foreground">
+                  <a
+                    className="text-blue-500 underline"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                  >
+                    d8f3e7a2-91c6-4c89-b7a8-12ef4f789c2b
+                  </a>
+                </p>
+              </div>
+              <div>
+                <p className="font-medium">API Secret</p>
+                <p className="text-muted-foreground">
+                  <a
+                    className="text-blue-500 underline"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                  >
+                    7f9e1c7b-b4e6-4d8c-a1f5-9d3b2e7f6c0a
+                  </a>
+                </p>
+              </div>
             </div>
           </CardContent>
         </Card>
