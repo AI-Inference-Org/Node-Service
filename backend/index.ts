@@ -1,7 +1,9 @@
 import authRoutes from "./routes/auth";
+import aiApplication from "./routes/aiapplication";
+import aiBinaries from "./routes/aiBinaries";
+import aiPlugins from "./routes/aiPlugins";
 import express, { Request, Response } from "express";
 import { PrismaClient } from "@prisma/client";
-import bodyParser from "body-parser";
 import cors from "cors";
 
 const prisma = new PrismaClient();
@@ -11,6 +13,9 @@ const PORT = process.env.PORT || 3000;
 app.use(cors());
 app.use(express.json());
 app.use("/auth", authRoutes);
+app.use("/api", aiApplication);
+app.use("/api", aiBinaries);
+app.use("/api", aiPlugins);
 
 app.use((err: Error, req: Request, res: Response) => {
   console.error(err.stack);
