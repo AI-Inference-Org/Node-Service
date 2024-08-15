@@ -19,6 +19,7 @@ const getDeployments = {
         name: Joi.string(),
         category: Joi.string(),
         type: Joi.string(),
+        userId: Joi.number(),
         sortBy: Joi.string(),
         limit: Joi.number().integer(),
         page: Joi.number().integer()

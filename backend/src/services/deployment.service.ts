@@ -14,6 +14,7 @@ const createDeployment = async (
     url: string,
     price: number,
     type: Type = Type.APPLICATION,
+    userId: number
 ): Promise<Deployment> => {
     return prisma.deployment.create({
         data: {
@@ -23,7 +24,8 @@ const createDeployment = async (
             description,
             url,
             price,
-            type
+            type,
+            userId
         }
     });
 };
@@ -53,17 +55,19 @@ const queryDeployments = async <Key extends keyof Deployment>(
         'description',
         'url',
         'price',
-        'type'
+        'type',
+        'userId'
     ] as Key[]
 ): Promise<Pick<Deployment, Key>[]> => {
     const page = options.page ?? 1;
     const limit = options.limit ?? 10;
     const sortBy = options.sortBy;
     const sortType = options.sortType ?? 'desc';
-    const deployments = await prisma.user.findMany({
+    console.log(filter)
+    const deployments = await prisma.deployment.findMany({
         where: filter,
         select: keys.reduce((obj, k) => ({ ...obj, [k]: true }), {}),
-        skip: page * limit,
+        skip: (page -  1) * limit,
         take: limit,
         orderBy: sortBy ? { [sortBy]: sortType } : undefined
     });

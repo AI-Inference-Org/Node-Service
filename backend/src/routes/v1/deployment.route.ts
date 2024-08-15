@@ -26,7 +26,7 @@ export default router;
 
 /**
  * @swagger
- * /users:
+ * /deployment:
  *   post:
  *     summary: Create a Deployment
  *     description: Only Sellers can create Deployment.
@@ -62,7 +62,7 @@ export default router;
  *                 type: number
  *               type:
  *                  type: string
- *                  enum: [application, binary, plugin]
+ *                  enum: [APPLICATION, BINARY, PLUGIN]
  *             example:
  *               name: Rat GPT
  *               category: Object Detection
@@ -74,10 +74,6 @@ export default router;
  *     responses:
  *       "201":
  *         description: Created
- *         content:
- *           application/json:
- *             schema:
- *                $ref: '#/components/schemas/Deployment'
  *       "400":
  *         $ref: '#/components/responses/DuplicateEmail'
  *       "401":
@@ -86,9 +82,9 @@ export default router;
  *         $ref: '#/components/responses/Forbidden'
  *
  *   get:
- *     summary: Get all users
- *     description: Only admins can retrieve all users.
- *     tags: [Users]
+ *     summary: Get all Deployments
+ *     description: all can call this.
+ *     tags: [Deployment]
  *     security:
  *       - bearerAuth: []
  *     parameters:
@@ -96,12 +92,22 @@ export default router;
  *         name: name
  *         schema:
  *           type: string
- *         description: User name
+ *         description: deployment name
  *       - in: query
- *         name: role
+ *         name: category
  *         schema:
  *           type: string
- *         description: User role
+ *         description: category
+ *       - in: query
+ *         name: type
+ *         schema:
+ *           type: string
+ *         description: deployment type
+ *       - in: query
+ *         name: userId
+ *         schema:
+ *           type: number
+ *         description: get user deployments
  *       - in: query
  *         name: sortBy
  *         schema:
@@ -153,11 +159,11 @@ export default router;
 
 /**
  * @swagger
- * /users/{id}:
+ * /deployment/{id}:
  *   get:
  *     summary: Get a user
  *     description: Logged in users can fetch only their own user information. Only admins can fetch other users.
- *     tags: [Users]
+ *     tags: [Deployment]
  *     security:
  *       - bearerAuth: []
  *     parameters:
@@ -181,77 +187,4 @@ export default router;
  *       "404":
  *         $ref: '#/components/responses/NotFound'
  *
- *   patch:
- *     summary: Update a user
- *     description: Logged in users can only update their own information. Only admins can update other users.
- *     tags: [Users]
- *     security:
- *       - bearerAuth: []
- *     parameters:
- *       - in: path
- *         name: id
- *         required: true
- *         schema:
- *           type: string
- *         description: User id
- *     requestBody:
- *       required: true
- *       content:
- *         application/json:
- *           schema:
- *             type: object
- *             properties:
- *               name:
- *                 type: string
- *               email:
- *                 type: string
- *                 format: email
- *                 description: must be unique
- *               password:
- *                 type: string
- *                 format: password
- *                 minLength: 8
- *                 description: At least one number and one letter
- *             example:
- *               name: fake name
- *               email: fake@example.com
- *               password: password1
- *     responses:
- *       "200":
- *         description: OK
- *         content:
- *           application/json:
- *             schema:
- *                $ref: '#/components/schemas/User'
- *       "400":
- *         $ref: '#/components/responses/DuplicateEmail'
- *       "401":
- *         $ref: '#/components/responses/Unauthorized'
- *       "403":
- *         $ref: '#/components/responses/Forbidden'
- *       "404":
- *         $ref: '#/components/responses/NotFound'
- *
- *   delete:
- *     summary: Delete a user
- *     description: Logged in users can delete only themselves. Only admins can delete other users.
- *     tags: [Users]
- *     security:
- *       - bearerAuth: []
- *     parameters:
- *       - in: path
- *         name: id
- *         required: true
- *         schema:
- *           type: string
- *         description: User id
- *     responses:
- *       "200":
- *         description: No content
- *       "401":
- *         $ref: '#/components/responses/Unauthorized'
- *       "403":
- *         $ref: '#/components/responses/Forbidden'
- *       "404":
- *         $ref: '#/components/responses/NotFound'
  */

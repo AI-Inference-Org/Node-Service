@@ -64,10 +64,17 @@ export default router;
  *                 format: password
  *                 minLength: 8
  *                 description: At least one number and one letter
+ *               wallet_address:
+ *                  type: string
+ *               role:
+ *                  type: string
+ *                  enum: [user, seller]
  *             example:
  *               name: fake name
  *               email: fake@example.com
  *               password: password1
+ *               wallet_address: 0xasdasdakjsdhkja
+ *               role: seller
  *     responses:
  *       "201":
  *         description: Created

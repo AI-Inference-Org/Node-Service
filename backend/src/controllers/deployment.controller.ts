@@ -5,13 +5,15 @@ import catchAsync from '../utils/catchAsync';
 import { deploymentService } from '../services';
 
 const createDeployment = catchAsync(async (req, res) => {
+
+    const user: any = req.user;
     const { name, category, status, description, url, price, type } = req.body;
-    const deployment = await deploymentService.createDeployment(name, category, status, description, url, price, type);
+    const deployment = await deploymentService.createDeployment(name, category, status, description, url, price, type, user.id);
     res.status(httpStatus.CREATED).send(deployment);
 });
 
 const getDeployments = catchAsync(async (req, res) => {
-    const filter = pick(req.query, ['name', 'name', 'type']);
+    const filter = pick(req.query, ['name', 'name', 'type', 'userId']);
     const options = pick(req.query, ['sortBy', 'limit', 'page']);
     const result = await deploymentService.queryDeployments(filter, options);
     res.send(result);
