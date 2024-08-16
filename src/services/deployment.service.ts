@@ -56,14 +56,15 @@ const queryDeployments = async <Key extends keyof Deployment>(
         'url',
         'price',
         'type',
-        'userId'
+        'userId',
+        'user'
     ] as Key[]
 ): Promise<Pick<Deployment, Key>[]> => {
     const page = options.page ?? 1;
     const limit = options.limit ?? 10;
     const sortBy = options.sortBy;
     const sortType = options.sortType ?? 'desc';
-    console.log(filter)
+
     const deployments = await prisma.deployment.findMany({
         where: filter,
         select: keys.reduce((obj, k) => ({ ...obj, [k]: true }), {}),
