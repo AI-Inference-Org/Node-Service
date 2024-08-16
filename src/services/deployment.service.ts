@@ -13,7 +13,7 @@ const createDeployment = async (
     description: string,
     url: string,
     price: number,
-    type: Type = Type.APPLICATION,
+    type: Type = Type.API,
     userId: number
 ): Promise<Deployment> => {
     return prisma.deployment.create({

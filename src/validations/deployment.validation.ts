@@ -3,13 +3,13 @@ import Joi from 'joi';
 
 const createDeployment = {
     body: Joi.object().keys({
-        name: Joi.string().required(),
+        name: Joi.string().optional(),
         category: Joi.string().required(),
-        status: Joi.string().required(),
+        status: Joi.string().empty(),
         description: Joi.string().required(),
         url: Joi.string().required(),
         price: Joi.number().required(),
-        type: Joi.string().required().valid(Type.APPLICATION, Type.BINARY, Type.PLUGIN)
+        type: Joi.string().required().valid(Type.API, Type.BINARY, Type.PLUGIN, Type.AI_APPLICATION)
     })
 };
 

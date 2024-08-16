@@ -1,0 +1,3 @@
+-- AlterTable
+ALTER TABLE "Deployment" ALTER COLUMN "name" DROP NOT NULL,
+ALTER COLUMN "status" DROP NOT NULL;
