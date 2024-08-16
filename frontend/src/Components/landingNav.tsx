@@ -1,5 +1,6 @@
 import { useState, useEffect, useRef } from 'react';
 import { cn } from "../lib/utils";
+import { Link } from 'react-router-dom';
 
 export function MainNav({ className, ...props }: React.HTMLAttributes<HTMLElement>) {
   const [isOpen, setIsOpen] = useState(false);
@@ -9,24 +10,8 @@ export function MainNav({ className, ...props }: React.HTMLAttributes<HTMLElemen
     setIsOpen(!isOpen);
   };
 
-  const handleClickOutside = (event: MouseEvent) => {
-    if (navRef.current && !navRef.current.contains(event.target as Node)) {
-      setIsOpen(false);
-    }
-  };
 
-  useEffect(() => {
-    if (isOpen) {
-      document.addEventListener('mousedown', handleClickOutside);
-    } else {
-      document.removeEventListener('mousedown', handleClickOutside);
-    }
 
-    // Clean up the event listener on component unmount
-    return () => {
-      document.removeEventListener('mousedown', handleClickOutside);
-    };
-  }, [isOpen]);
 
   return (
     <nav className={cn("bg-white border-gray-200 dark:bg-gray-900", className)} {...props} ref={navRef}>
@@ -49,16 +34,16 @@ export function MainNav({ className, ...props }: React.HTMLAttributes<HTMLElemen
         <div className={`${isOpen ? 'block' : 'hidden'} w-full md:block h-full`} id="navbar-default">
           <ul className="font-medium flex flex-col p-4 md:p-0 border border-gray-100 rounded-lg bg-gray-50 md:flex-row md:space-x-8 rtl:space-x-reverse md:mt-0 md:border-0 md:bg-white dark:bg-gray-800 md:dark:bg-gray-900 dark:border-gray-700">
             <li>
-              <a href="/customer/login" className="block py-2 px-3 text-gray-900 rounded hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-blue-700 md:p-0 ">Buy Services</a>
+              <Link to="/customer/login" className="block py-2 px-3 text-gray-900 rounded hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-blue-700 md:p-0 ">Buy Services</Link>
             </li>
             <li>
-              <a href="/provider/login" className="block py-2 px-3 text-gray-900 rounded hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-blue-700 md:p-0 ">Sell Services</a>
+              <Link to="/provider/login" className="block py-2 px-3 text-gray-900 rounded hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-blue-700 md:p-0 ">Sell Services</Link>
             </li>
             <li>
-              <a href="/organization-signup" className="block py-2 px-3 text-gray-900 rounded hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-blue-700 md:p-0 ">Organization</a>
+              <Link to="/organization-signup" className="block py-2 px-3 text-gray-900 rounded hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-blue-700 md:p-0 ">Organization</Link>
             </li>
             <li>
-              <a href="/user-signup" className="block py-2 px-3 text-gray-900 rounded hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-blue-700 md:p-0 ">Service Providers</a>
+              <Link to="/user-signup" className="block py-2 px-3 text-gray-900 rounded hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-blue-700 md:p-0 ">Service Providers</Link>
             </li>
           </ul>
         </div>

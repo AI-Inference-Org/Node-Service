@@ -3,6 +3,7 @@ import { Button } from "../components/ui/button";
 import { Input } from "../components/ui/input";
 import { Label } from "../components/ui/label";
 import { LoginFormProps } from "../types/formComponentProps";
+import { Link } from "react-router-dom";
 
 export function FormComponent({ entityType }: LoginFormProps) {
   const signinUrl =
@@ -41,12 +42,12 @@ export function FormComponent({ entityType }: LoginFormProps) {
               required
             />
           </div>
-          <a
-            href={signinUrl}
+          <Link
+            to={signinUrl}
             className="text-sm text-muted-foreground hover:text-sky-600"
           >
             Sign up instead?
-          </a>
+          </Link>
           <Button className="w-full">Sign In</Button>
         </div>
       </form>

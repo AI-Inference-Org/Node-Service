@@ -1,4 +1,4 @@
-import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
+import { BrowserRouter as Router, Route, Routes, useNavigate } from "react-router-dom";
 import Landing from "../pages/LandingPage";
 import AuthenticationPage from "../pages/AuthenticationPage";
 import SignUpAuthPage from "../pages/SignUpAuthPage";
@@ -13,8 +13,22 @@ import UserDashboard from "../pages/UserDashboard";
 import UserAIMarketPlace from "../pages/userAIMarketPlace";
 import ComputeMarketPlace from "../pages/ComputeMarketplace";
 import CheckOutPage from "../pages/CheckoutPage";
+import { useEffect } from "react";
 
 const AppRoutes = () => {
+
+  const navigate = useNavigate();
+
+  useEffect(()=>{
+
+    const token = localStorage.getItem("access");
+
+    if (token === null) {
+      navigate("/");
+    }
+
+  },[])
+
   return (
     <div>
       <Routes>
