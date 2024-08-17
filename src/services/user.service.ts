@@ -14,7 +14,7 @@ const createUser = async (
   password: string,
   wallet_address: string,
   name?: string,
-  role: Role = Role.USER,
+  role: Role = Role.USER
 ): Promise<User> => {
   if (await getUserByEmail(email)) {
     throw new ApiError(httpStatus.BAD_REQUEST, 'Email already taken');
@@ -65,7 +65,7 @@ const queryUsers = async <Key extends keyof User>(
   const users = await prisma.user.findMany({
     where: filter,
     select: keys.reduce((obj, k) => ({ ...obj, [k]: true }), {}),
-    skip: (page-1) * limit,
+    skip: (page - 1) * limit,
     take: limit,
     orderBy: sortBy ? { [sortBy]: sortType } : undefined
   });

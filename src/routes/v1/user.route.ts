@@ -11,10 +11,7 @@ router
   .post(auth('manageUsers'), validate(userValidation.createUser), userController.createUser)
   .get(auth('getUsers'), validate(userValidation.getUsers), userController.getUsers);
 
-router
-  .route('/get-me')
-  .get(auth('getMe'), userController.getMe);
-
+router.route('/get-me').get(auth('getMe'), userController.getMe);
 
 router
   .route('/:userId')
@@ -255,8 +252,6 @@ export default router;
  *       "404":
  *         $ref: '#/components/responses/NotFound'
  */
-
-
 
 /**
  * @swagger

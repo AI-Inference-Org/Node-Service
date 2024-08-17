@@ -7,27 +7,27 @@ import prisma from '../client';
  * @returns {Promise<User>}
  */
 const createDeployment = async (
-    name: string,
-    category: string,
-    status: string,
-    description: string,
-    url: string,
-    price: number,
-    type: Type = Type.API,
-    userId: number
+  name: string,
+  category: string,
+  status: string,
+  description: string,
+  url: string,
+  price: number,
+  type: Type = Type.API,
+  userId: number
 ): Promise<Deployment> => {
-    return prisma.deployment.create({
-        data: {
-            name,
-            category,
-            status,
-            description,
-            url,
-            price,
-            type,
-            userId
-        }
-    });
+  return prisma.deployment.create({
+    data: {
+      name,
+      category,
+      status,
+      description,
+      url,
+      price,
+      type,
+      userId
+    }
+  });
 };
 
 /**
@@ -40,39 +40,39 @@ const createDeployment = async (
  * @returns {Promise<QueryResult>}
  */
 const queryDeployments = async <Key extends keyof Deployment>(
-    filter: object,
-    options: {
-        limit?: number;
-        page?: number;
-        sortBy?: string;
-        sortType?: 'asc' | 'desc';
-    },
-    keys: Key[] = [
-        'id',
-        'name',
-        'category',
-        'status',
-        'description',
-        'url',
-        'price',
-        'type',
-        'userId',
-        'user'
-    ] as Key[]
+  filter: object,
+  options: {
+    limit?: number;
+    page?: number;
+    sortBy?: string;
+    sortType?: 'asc' | 'desc';
+  },
+  keys: Key[] = [
+    'id',
+    'name',
+    'category',
+    'status',
+    'description',
+    'url',
+    'price',
+    'type',
+    'userId',
+    'user'
+  ] as Key[]
 ): Promise<Pick<Deployment, Key>[]> => {
-    const page = options.page ?? 1;
-    const limit = options.limit ?? 10;
-    const sortBy = options.sortBy;
-    const sortType = options.sortType ?? 'desc';
+  const page = options.page ?? 1;
+  const limit = options.limit ?? 10;
+  const sortBy = options.sortBy;
+  const sortType = options.sortType ?? 'desc';
 
-    const deployments = await prisma.deployment.findMany({
-        where: filter,
-        select: keys.reduce((obj, k) => ({ ...obj, [k]: true }), {}),
-        skip: (page -  1) * limit,
-        take: limit,
-        orderBy: sortBy ? { [sortBy]: sortType } : undefined
-    });
-    return deployments as Pick<Deployment, Key>[];
+  const deployments = await prisma.deployment.findMany({
+    where: filter,
+    select: keys.reduce((obj, k) => ({ ...obj, [k]: true }), {}),
+    skip: (page - 1) * limit,
+    take: limit,
+    orderBy: sortBy ? { [sortBy]: sortType } : undefined
+  });
+  return deployments as Pick<Deployment, Key>[];
 };
 
 /**
@@ -82,26 +82,17 @@ const queryDeployments = async <Key extends keyof Deployment>(
  * @returns {Promise<Pick<Deployment, Key> | null>}
  */
 const getDeploymentById = async <Key extends keyof Deployment>(
-    id: number,
-    keys: Key[] = [
-        'id',
-        'name',
-        'category',
-        'status',
-        'description',
-        'url',
-        'price',
-        'type'
-    ] as Key[]
+  id: number,
+  keys: Key[] = ['id', 'name', 'category', 'status', 'description', 'url', 'price', 'type'] as Key[]
 ): Promise<Pick<Deployment, Key> | null> => {
-    return prisma.deployment.findUnique({
-        where: { id },
-        select: keys.reduce((obj, k) => ({ ...obj, [k]: true }), {})
-    }) as Promise<Pick<Deployment, Key> | null>;
+  return prisma.deployment.findUnique({
+    where: { id },
+    select: keys.reduce((obj, k) => ({ ...obj, [k]: true }), {})
+  }) as Promise<Pick<Deployment, Key> | null>;
 };
 
 export default {
-    createDeployment,
-    queryDeployments,
-    getDeploymentById,
+  createDeployment,
+  queryDeployments,
+  getDeploymentById
 };
