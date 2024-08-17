@@ -2,7 +2,7 @@
   "compilerOptions": {
     "target": "es2016",
     "outDir": "./build",
-    "module": "commonjs",
+    "module": "CommonJS",
     "types": ["node"],
     "resolveJsonModule": true,
     "esModuleInterop": true,
